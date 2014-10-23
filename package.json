@@ -1,14 +1,14 @@
 {
-  "name": "react-swipeable",
+  "name": "react-swiper",
   "version": "0.1.0",
   "description": "Detects and triggers touch events for swiping such as onSwipeLeft, onSwipeDown, etc. with ReactJS",
-  "main": "Swipeable.js",
+  "main": "Swiper.js",
   "scripts": {
     "build": "jsx --harmony -x jsx src/ ./"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/joakimbeng/react-swipeable"
+    "url": "git://github.com/joakimbeng/react-swiper"
   },
   "keywords": [
     "react",
@@ -19,9 +19,9 @@
   "author": "Joakim Carlstein <joakim@klei.se>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/joakimbeng/react-swipeable/issues"
+    "url": "https://github.com/joakimbeng/react-swiper/issues"
   },
-  "homepage": "https://github.com/joakimbeng/react-swipeable",
+  "homepage": "https://github.com/joakimbeng/react-swiper",
   "peerDependencies": {
     "react": "^0.10"
   },

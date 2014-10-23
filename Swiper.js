@@ -5,7 +5,7 @@
 var React = require('react');
 var merge = require('react/lib/merge');
 
-var Swipeable = React.createClass({displayName: 'Swipeable',
+var Swiper = React.createClass({displayName: 'Swiper',
   propTypes: {
     tagName: React.PropTypes.string,
     component: React.PropTypes.component,
@@ -155,4 +155,4 @@ var Swipeable = React.createClass({displayName: 'Swipeable',
   }
 });
 
-module.exports = Swipeable;
+module.exports = Swiper;
