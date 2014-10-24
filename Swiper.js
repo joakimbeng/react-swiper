@@ -118,7 +118,6 @@ var Swiper = React.createClass({displayName: 'Swiper',
 
   _getSwipeDirection: function (touch) {
     var dir = merge({x: null, y: null}, this.state.direction);
-    console.log({y: this._getSwipeLengthY(touch), x: this._getSwipeLengthX(touch)});
     if (this._getSwipeLengthY(touch) > this.props.moveThreshold) {
       dir.y = this._getSwipeDirectionY(touch);
     }
@@ -141,7 +140,6 @@ var Swiper = React.createClass({displayName: 'Swiper',
   },
 
   _isSwipeDirectionUnchanged: function (direction) {
-    console.log(this.state.direction, direction);
     return (!this.state.direction.x || this.state.direction.x === direction.x) &&
            (!this.state.direction.y || this.state.direction.y === direction.y);
   },

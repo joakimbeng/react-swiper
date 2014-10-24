@@ -1,6 +1,6 @@
 {
   "name": "react-swiper",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Detects and triggers touch events for swiping such as onSwipeLeft, onSwipeDown, etc. with ReactJS",
   "main": "Swiper.js",
   "scripts": {
