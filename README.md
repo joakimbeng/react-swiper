@@ -105,6 +105,78 @@ var Example = React.createClass({
 module.exports = Example;
 ```
 
+## Properties
+
+### `tagName`
+
+**Type** `String`
+
+**Default** `"div"`
+
+
+Specifies what type of element the `Swiper` component should be rendered as. See `component` below as well.
+
+### `component`
+
+**Type** `ReactComponent`
+
+**Default** `undefined`
+
+
+Specifies what component `Swiper` should be rendered as. See `tagName` above as well. If both `tagName` and `component` are specified the later takes precedence.
+
+### `onSwipe`
+
+**Type** `Function(event)`
+
+**Default** `undefined`
+
+
+If provided it's called on all swipes.
+
+Example `event`:
+
+```javascript
+{
+  type: String, // The type of swipe, e.g. "swipeLeft", "swipeUp" or "swipeDownRight"
+  timeStampStart: Date, // Timestamp for when the swipe was initiated
+  timeStampEnd: Date, // Timestamp for when the swipe was finished,
+  initialTouch: Touch, // A Touch object for the initial touch position - https://developer.mozilla.org/en-US/docs/Web/API/Touch
+  finalTouch: Touch, // A Touch object for the final touch position
+}
+```
+
+### `onSwipe<direction>`
+
+**Direction** `Up`, `UpRight`, `Right`, `DownRight`, `Down`, `DownLeft`, `Left` and `UpLeft`
+
+**Type** `Function(event)`
+
+**Default** `undefined`
+
+
+If provided it's called with a swipe event (see example in `onSwipe` above) for a swipe in the wanted direction.
+E.g. `onSwipeUp` is called for swipes in the up direction.
+
+## `minSwipeLength`
+
+**Type** `Number`
+
+**Default** `75`
+
+
+The minimum swipe length that's required for a swipe event to be triggered.
+
+## `moveThreshold`
+
+**Type** `Number`
+
+**Default** `10`
+
+
+The minimum move length in one direction to be considered as the swipe direction, this also affects the required velocity in which the swipe must occur.
+
+
 ## License
 
 MIT
