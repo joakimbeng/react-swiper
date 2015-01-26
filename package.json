@@ -22,9 +22,6 @@
     "url": "https://github.com/joakimbeng/react-swiper/issues"
   },
   "homepage": "https://github.com/joakimbeng/react-swiper",
-  "peerDependencies": {
-    "react": "*"
-  },
   "devDependencies": {
     "react-tools": "~0.11.2"
   }
