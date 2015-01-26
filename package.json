@@ -24,5 +24,8 @@
   "homepage": "https://github.com/joakimbeng/react-swiper",
   "devDependencies": {
     "react-tools": "~0.11.2"
+  },
+  "dependencies": {
+    "object-assign": "^2.0.0"
   }
 }
