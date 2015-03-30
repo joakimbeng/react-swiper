@@ -2,13 +2,13 @@
  * @jsx React.DOM
  */
 
-var React = require('react');
-var merge = require('react/lib/merge');
+var React = require('react'),
+    objectAssign = require('object-assign');
 
 var Swiper = React.createClass({
   propTypes: {
     tagName: React.PropTypes.string,
-    component: React.PropTypes.component,
+    component: React.PropTypes.element,
     minSwipeLength: React.PropTypes.number,
     moveThreshold: React.PropTypes.number,
     onSwipe: React.PropTypes.func,
@@ -40,9 +40,9 @@ var Swiper = React.createClass({
   },
 
   render: function() {
-    var Component = this.props.component || React.DOM[this.props.tagName];
-    return this.transferPropsTo(
-      <Component onTouchStart={this.handleTouchStart}
+    var Component = this.props.component || this.props.tagName;
+    return (
+      <Component {...this.props} onTouchStart={this.handleTouchStart}
           onTouchEnd={this.handleTouchEnd}
           onTouchCancel={this.handleTouchEnd}
           onTouchMove={this.handleTouchMove}>
@@ -117,7 +117,7 @@ var Swiper = React.createClass({
   },
 
   _getSwipeDirection: function (touch) {
-    var dir = merge({x: null, y: null}, this.state.direction);
+    var dir = objectAssign({x: null, y: null}, this.state.direction);
     if (this._getSwipeLengthY(touch) > this.props.moveThreshold) {
       dir.y = this._getSwipeDirectionY(touch);
     }
