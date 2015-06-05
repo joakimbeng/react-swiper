@@ -52,8 +52,6 @@ var Swiper = require('react-swiper');
 
 React.initializeTouchEvents(true);
 
-var React = require('react');
-
 var Example = React.createClass({
 
   render: function() {
@@ -83,8 +81,6 @@ var Swiper = require('react-swiper');
 var MyComponent = require('./my-component');
 
 React.initializeTouchEvents(true);
-
-var React = require('react');
 
 var Example = React.createClass({
 
