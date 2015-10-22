@@ -5,7 +5,7 @@
 var React = require('react'),
     objectAssign = require('object-assign');
 
-var Swiper = React.createClass({displayName: "Swiper",
+var Swiper = React.createClass({displayName: 'Swiper',
   propTypes: {
     tagName: React.PropTypes.string,
     component: React.PropTypes.element,
@@ -42,7 +42,7 @@ var Swiper = React.createClass({displayName: "Swiper",
   render: function() {
     var Component = this.props.component || this.props.tagName;
     return (
-      React.createElement(Component, React.__spread({},  this.props, {onTouchStart: this.handleTouchStart, 
+      Component(Object.assign({}, this.props, {onTouchStart: this.handleTouchStart, 
           onTouchEnd: this.handleTouchEnd, 
           onTouchCancel: this.handleTouchEnd, 
           onTouchMove: this.handleTouchMove}), 
