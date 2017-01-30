@@ -8,7 +8,8 @@ var React = require('react'),
 var Swiper = React.createClass({displayName: 'Swiper',
   propTypes: {
     tagName: React.PropTypes.string,
-    component: React.PropTypes.element,
+    // Allows us to pass any form of a react component in.
+    component: React.PropTypes.func,
     minSwipeLength: React.PropTypes.number,
     moveThreshold: React.PropTypes.number,
     onSwipe: React.PropTypes.func,
